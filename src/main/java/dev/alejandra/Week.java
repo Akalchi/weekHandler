@@ -40,4 +40,8 @@ public class Week {
         return this.days.get(index);
     }
 
+    public boolean isInDaysList(String day) {
+        return this.days.contains(day);
+    }
+
 }
