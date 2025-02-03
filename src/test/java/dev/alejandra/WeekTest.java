@@ -35,11 +35,20 @@ public class WeekTest {
     }
 
     @Test
+    @DisplayName("Should sort the days of the week")
     public void testSort() {
         week.sort();
         List <String> days = week.getDaysOfWeek();
         assertEquals("Friday", days.get(0));
         assertEquals("Wednesday", days.get(6));
     }
+
+    @Test
+    @DisplayName("Should clear the list")
+    public void testClearList() {
+        week.clearList();
+        assertEquals(0, week.getListSize());
+    }
+
 
 }
