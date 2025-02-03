@@ -23,5 +23,9 @@ public class Week {
     public int getListSize() {
         return this.days.size();
     }
-    
+
+    public boolean deleteDay(String day) {
+        return this.days.remove(day);
+    }
+
 }
