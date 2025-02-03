@@ -15,11 +15,17 @@ public class WeekTest {
     }
 
     @Test 
-   
-    public void getDaysOfWeek() {
+    @DisplayName("Should get the days of the week")
+    public void testgetDaysOfWeek() {
         List<String> days = week.getDaysOfWeek();
         assertEquals(7, days.size());
         assertTrue(days.contains("Monday"));
+    }
+
+    @Test 
+    @DisplayName("Should get the size of the list")
+    public void testGetListSize() {
+        assertEquals(7, week.getListSize());
     }
 
 }
