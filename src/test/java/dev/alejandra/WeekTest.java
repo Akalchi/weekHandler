@@ -1,5 +1,6 @@
 package dev.alejandra;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.List;
@@ -52,12 +53,20 @@ public class WeekTest {
     }
 
     @Test 
-    @DisplayName("Should get the day by index")
+    @DisplayName("Should get the chosen day")
     public void testGetDayByIndex() {
         assertEquals("Monday", week.getDayByIndex(0));
         assertEquals("Sunday", week.getDayByIndex(6));
         assertThrows(IndexOutOfBoundsException.class, () -> week.getDayByIndex(7));
     }
+
+    @Test
+    @DisplayName("Should return if chosen day exists in the list")
+    public void testIsInDaysList() {
+        assertTrue(week.isInDaysList("Monday"));
+        assertFalse(week.isInDaysList("December"));
+    }
+    
 
 
 }
