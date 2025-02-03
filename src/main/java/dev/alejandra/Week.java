@@ -35,6 +35,9 @@ public class Week {
     public void clearList() {
         this.days.clear();
     }
-    
+
+    public String getDayByIndex(int index) {
+        return this.days.get(index);
+    }
 
 }
