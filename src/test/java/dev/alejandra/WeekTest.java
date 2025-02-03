@@ -28,4 +28,11 @@ public class WeekTest {
         assertEquals(7, week.getListSize());
     }
 
+    @Test 
+    @DisplayName("Should delete a day")
+    public void testDeleteDay() {
+        assertTrue(week.deleteDay("Monday"));
+    }
+    
+
 }
