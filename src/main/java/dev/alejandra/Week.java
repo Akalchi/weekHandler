@@ -19,4 +19,9 @@ public class Week {
     public List<String> getDaysOfWeek() {
         return this.days;
     }
+
+    public int getListSize() {
+        return this.days.size();
+    }
+    
 }
