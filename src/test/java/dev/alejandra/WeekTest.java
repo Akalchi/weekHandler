@@ -33,6 +33,13 @@ public class WeekTest {
     public void testDeleteDay() {
         assertTrue(week.deleteDay("Monday"));
     }
-    
+
+    @Test
+    public void testSort() {
+        week.sort();
+        List <String> days = week.getDaysOfWeek();
+        assertEquals("Friday", days.get(0));
+        assertEquals("Wednesday", days.get(6));
+    }
 
 }
